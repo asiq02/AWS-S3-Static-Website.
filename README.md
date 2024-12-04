@@ -43,5 +43,5 @@ In the Actions dropdown, choose Make public using ACL.
 Choose Make public.
 Once the green banner pops up, choose Close.
 
-                                               *VIEW THE WEBSITE*
+VIEW THE WEBSITE
 
