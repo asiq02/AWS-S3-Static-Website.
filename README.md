@@ -1,47 +1,52 @@
-# AWS-S3-Static-Website.
-Using the AWS S3 (Simple storage service) hosting a Static Website.
+# AWS S3 Static Website Hosting
 
-Step 1 : Creating bucket
-Create an bucket in Amazon S3
-Open Amazon S3.
-Create a storage space for your website files.
-Select the AWS Region closest to you. You can find this at the top right corner of your AWS Management console, right next to your name!
-Choose Create bucket.
-For Object Ownership, choose ACLs enabled.
-Choose Bucket owner preferred.
-For Block Public Access settings for this bucket, clear the check box for Block all public access.
-For Bucket Versioning, choose Enable.
-Choose Create bucket.
+This repository provides step-by-step instructions for hosting a static website using Amazon S3 (Simple Storage Service).
 
-Step 2 : Upload Website Content to Your bucket
-For Bucket Versioning, choose Enable.
-Choose Create bucket.
-Return to the Amazon S3 console with your bucket page open.
-Choose the Objects tab.
-Choose Upload.
-Choose Add files.
-Choose index.html.
-Choose Add folder and the following files in after index.html.
-Choose Upload.
+## Steps to Host a Static Website on AWS S3
 
-Step 3 : Configure a static website on Amazon S3
-Make sure you're back in your bucket's page. 
-If you're not sure, choose Buckets on the left hand side navigation bar, and then choose the bucket you created for this project. 
-Choose the Properties tab.
-Scroll all the way down to the Static website hosting panel..
-Choose Edit.
-Configure the following settings:  
-               Static web hosting: Choose Enable.
-               Hosting type: Choose Host a static website.
-               Index document: Enter index.html
-Choose Save changes. 
-In the Static website hosting panel, click on the URL under Bucket website endpoint.
+### Step 1: Create a Bucket
+1. Open the Amazon S3 console.
+2. Click **Create bucket** and configure the following:
+   - **Bucket Name**: Provide a unique name for your bucket.
+   - **Region**: Select the AWS Region closest to you.
+   - **Object Ownership**: Choose **ACLs enabled** and **Bucket owner preferred**.
+   - **Block Public Access**: Uncheck **Block all public access** to allow public access to your files.
+   - **Bucket Versioning**: Enable versioning to keep track of file changes.
+3. Click **Create bucket**.
 
-Step 4 : Make objects in your S3 bucket public
-Select the checkboxes next to your index.html file and the folder of website assets.
-In the Actions dropdown, choose Make public using ACL.
-Choose Make public.
-Once the green banner pops up, choose Close.
+### Step 2: Upload Website Content to Your Bucket
+1. Navigate to your bucket in the Amazon S3 console.
+2. Go to the **Objects** tab and click **Upload**.
+3. Add your website files:
+   - Click **Add files** to upload your `index.html`.
+   - Click **Add folder** to upload additional website assets (like CSS, JS, images, etc.).
+4. Click **Upload**.
 
-VIEW THE WEBSITE
+### Step 3: Configure the Bucket for Static Website Hosting
+1. Open your bucket and navigate to the **Properties** tab.
+2. Scroll to the **Static website hosting** section and click **Edit**.
+3. Configure the following settings:
+   - **Static web hosting**: Enable.
+   - **Hosting type**: Host a static website.
+   - **Index document**: Enter `index.html`.
+4. Click **Save changes**.
+5. Copy the **Bucket website endpoint URL** provided.
 
+### Step 4: Make Files Public
+1. In your bucket, select the checkboxes for `index.html` and your website assets.
+2. Click the **Actions** dropdown and select **Make public using ACL**.
+3. Confirm by clicking **Make public**.
+
+### View the Website
+- Visit the **Bucket website endpoint URL** to view your hosted website.
+
+---
+
+## Notes
+- Ensure you follow security best practices while managing permissions.
+- If you need a custom domain, consider configuring Amazon Route 53 for domain management.
+
+## License
+This repository is licensed under the MIT License. Feel free to use and modify the instructions as needed.
+
+Happy hosting!
